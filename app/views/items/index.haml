@@ -1,4 +1,5 @@
 %body
+  -# %script{src: "script.js"}
   %header.header
     .header__top
       .header__top__main
@@ -6,14 +7,250 @@
           .header__top__main__tag
             = image_tag 'logo.png', class: 'header__top__main__tag'
         %form.header__top__main__searchBox
-          %input.header__top__main__searchBox__input-text{ placeholder: "キーワードから探す", :type => "text"}/
+          %input.header__top__main__searchBox__input-text{ placeholder: "キーワードから探す", type: "text"}/
           %button.header__top__main__searchBox__button{ type: "submit"}
             .header__top__main__searchBox__button__search
               = image_tag 'icon-search 1.png', class: 'header__top__main__searchBox__button__search'
       .header__top__navi
-        %ul.header__top__navi__listsLeft
-          %a#catBtn.header__top__navi__listsLeft__categori{ href: "#"} カテゴリー
-          %a#catBtn.header__top__navi__listsLeft__branded{ href: "#"} ブランド
+        -# %ul.header__top__navi__listsLeft
+        -#   %a#catBtn.header__top__navi__listsLeft__categori{ href: "#"} カテゴリー
+          -# %a#catBtn.header__top__navi__listsLeft__branded{ href: "#"} ブランド
+        %ul.listsLeft
+          %li
+            %a{href: ""} カテゴリー
+            %ul
+              %li
+                %a{href: ""} Child1
+                %ul
+                  %li.listsLeft__categori
+                    %a{href: ""} Grandchild1
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild2
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild3
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild4
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild5
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+              %li
+                %a{href: ""} Child2
+                %ul
+                  %li
+                    %a{href: ""} Grandchild1
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild2
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild3
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild4
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild5
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+              %li
+                %a{href: ""} Child3
+                %ul
+                  %li
+                    %a{href: ""} Grandchild1
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild2
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild3
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild4
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+                  %li
+                    %a{href: ""} Grandchild5
+                    %ul
+                      %li
+                        %a{href: ""} Greatgrandchild1
+                      %li
+                        %a{href: ""} Greatgrandchild2
+                      %li
+                        %a{href: ""} Greatgrandchild3
+                      %li
+                        %a{href: ""} Greatgrandchild4
+                      %li
+                        %a{href: ""} Greatgrandchild5
+              %li
+                %a{href: ""} Child4
+                %ul
+                  %li
+                    %a{href: ""} Grandchild1
+                  %li
+                    %a{href: ""} Grandchild2
+                  %li
+                    %a{href: ""} Grandchild3
+                  %li
+                    %a{href: ""} Grandchild4
+                  %li
+                    %a{href: ""} Grandchild5
+              %li
+                %a{href: ""} Child5
+                %ul
+                  %li
+                    %a{href: ""} Grandchild1
+                  %li
+                    %a{href: ""} Grandchild2
+                  %li
+                    %a{href: ""} Grandchild3
+                  %li
+                    %a{href: ""} Grandchild4
+                  %li
+                    %a{href: ""} Grandchild5
+          .listsLeft__branded
+            %a{href: ""} ブランド
         %ul.header__top__navi__listsRight
           %a.header__top__navi__listsRight__login{ href: "/users/sign_in"} ログイン
           %a.header__top__navi__listsRight__signUp{ href: "/users/sign_up"} 新規会員登録
@@ -38,7 +275,7 @@
         %span{ style: "border-bottom: solid 3px #3CCACE; padding-bottom: 15px;"}> 選ばれる
         3つの理由
       %ul.main__Introduction__lists
-        %li.main__Introduction__lists__list
+        .main__Introduction__lists__list
           .main__Introduction__lists__list__pict
             = image_tag 'pict-reason-01.jpg', class: 'main__Introduction__lists__list__pict',  width: "306"
             %span.main__Introduction__lists__list__number 1
@@ -47,7 +284,7 @@
             ですぐに出品
           %p.main__Introduction__lists__list__description
             スマホで入力するだけで簡単に出品できる！
-        %li.main__Introduction__lists__list
+        .main__Introduction__lists__list
           .main__Introduction__lists__list__pict
             = image_tag 'pict-reason-02.jpg', class: 'main__Introduction__lists__list__pict',  width: "306"
             %span.main__Introduction__lists__list__number 2
@@ -56,7 +293,7 @@
             で使いやすい
           %p.main__Introduction__lists__list__description
             めんどくさい入力は必要なく、検索も購入もスムーズ！
-        %li.main__Introduction__lists__listlist
+        .main__Introduction__lists__listlist
           .main__Introduction__lists__listlist__pict
             = image_tag 'pict-reason-03.jpg', class: 'main__Introduction__lists__list__pict',  width: "306"
             %span.main__Introduction__lists__listlist__number 3
@@ -270,7 +507,7 @@
         = image_tag 'logo-white.png', class: 'footer__top__logo'
       %div
         %p.footer__top__label © FURIMA
-  %a{:href => "/items/new"}
+  %a{href: "/items/new"}
     .purchaseBtn
       %span.purchaseBtn__text 出品する
       = image_tag 'icon_camera.png', class: 'purchaseBtn__icon'

@@ -54,18 +54,18 @@ body {
       font-size: 14px;
       line-height: 38px;
       position: relative;
-      &__listsLeft {
-        padding-left: 0;
-        margin-top: 8px;
-        &__categori {
-          color: #333333;
-          padding-right: 40px;
-        }
-        &__branded {
-          color: #333333;
-          padding-right: 30px;
-        }
-      }
+      // &__listsLeft {
+      //   padding-left: 0;
+      //   margin-top: 8px;
+      //   &__categori {
+      //     color: #333333;
+      //     padding-right: 40px;
+      //   }
+      //   &__branded {
+      //     color: #333333;
+      //     padding-right: 30px;
+      //   }
+      // }
       &__listsRight {
         position: absolute; right:0px;
         padding-left: 0;
@@ -85,6 +85,59 @@ body {
 
 a {
   text-decoration: none;
+}
+.listsLeft {
+  display: flex;
+  height: 2rem;
+}
+.listsLeft > li {/*親階層のみ幅を100pxにする*/
+  width: 100px;
+  font-size: 14px;
+}
+/*子階層以降共通*/
+.listsLeft li li {
+  width: 240px;
+  height: 0;
+  overflow: hidden;
+}
+.listsLeft li li a {
+  border-top: 1px solid #eee;
+}
+.listsLeft li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
+}
+/*孫階層以降共通*/
+.listsLeft li ul li ul {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/*全てのリスト・リンク共通*/
+.listsLeft li {
+  list-style: none;
+  position: relative;
+}
+.listsLeft li a {
+  background: #9fcbf5;
+  color: #333333;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-decoration: none;
+  width: 100%;
+}
+.listsLeft__branded{
+  width: 100px;
+  color: #333333;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  font-size: 14px;
 }
 
 
@@ -154,12 +207,15 @@ a {
         &__text {
           font-size: 24px;
           text-align: center;
+
         }
         &__description {
           width: 100%;
           font-size: 18px;
           margin-right: 20px;
           margin-bottom: 0;
+          display: teble-cell;
+          text-decoration: none;
         }
       }
       &__listlist {
@@ -436,3 +492,5 @@ li:hover{
 a{
   color: inherit;
 }
+
+

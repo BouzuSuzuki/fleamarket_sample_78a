@@ -386,7 +386,7 @@ a {
             &__img{
               width: 220px;
               height: 150px;
-              object-fit: cover;
+              object-fit: contain;
             }
           }
           &__body {
@@ -500,6 +500,7 @@ a {
   right: 32px;
   position: fixed;
   padding: 15px;
+
   &__text {
     color: #fff;
     display: block;

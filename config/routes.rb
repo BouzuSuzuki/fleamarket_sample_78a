@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'items#index'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
-    sessions: 'users/sessions'   
+    sessions: 'users/sessions'
   } 
   get 'users/show', to: 'users#show'
   get 'users/logout', to: 'users#logout'
@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     collection do
       get 'category/get_category_children', to: 'items#get_category_children', defaults: { format: 'json' }
       get 'category/get_category_grandchildren', to: 'items#get_category_grandchildren', defaults: { format: 'json' }
+    end
+    member do
+      get 'done', to: 'items#done'
     end
   end
 
